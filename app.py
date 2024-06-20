@@ -1,8 +1,8 @@
 from flask import Flask, render_template, request, url_for
 from flask_bootstrap import Bootstrap
-from textblob import TextBlob, Word
-import random
+from textblob import TextBlob
 import time
+from collections import OrderedDict
 
 app = Flask(__name__)
 Bootstrap(app)
@@ -19,23 +19,25 @@ def analyse():
         blob = TextBlob(rawtext)
         received_text = blob
         blob_sentiment, blob_subjectivity = blob.sentiment.polarity, blob.sentiment.subjectivity
-        no_of_tokens = len(list(blob.words))
-        nouns = list()
+        no_of_tokens = len(blob.words)
+
+        # Extract unique nouns and adjectives using an OrderedDict to maintain Order
+        unique_nouns = OrderedDict()
         for word, tag in blob.tags:
-            if tag == 'NN':
-                nouns.append(word.lemmatize())
-                len_of_words = len(nouns)
-                rand_words = random.sample(nouns, len(nouns))
-                final_word = list()
-                for item in rand_words:
-                    word = Word(item).pluralize()
-                    final_word.append(word)
-                    summary = final_word
-                    end = time.time()
-                    final_time = end - start
+            if tag == 'NN' or tag == 'JJ':
+                unique_nouns[word.lemmatize()] = None
+        
+        # Convert the OrderedDict back to a list
+        final_words = list(unique_nouns.keys())
+        
+        len_of_words = len(final_words)
+        summary = final_words
+
+        end = time.time()
+        elapsed_time = "{:.2f}".format(end - start)
 
     return render_template(
-        'index.html', received_text=received_text, number_of_tokens=no_of_tokens, blob_sentiment=blob_sentiment, blob_subjectivity=blob_subjectivity, summary=summary, final_time=final_time, raw_text=rawtext
+        'index.html', received_text=received_text, number_of_tokens=no_of_tokens, blob_sentiment=blob_sentiment, blob_subjectivity=blob_subjectivity, summary=summary, elapsed_time=elapsed_time, raw_text=rawtext, len_of_words=len_of_words
     )
 
 if __name__ == "__main__":

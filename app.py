@@ -22,13 +22,13 @@ def analyse():
         no_of_tokens = len(blob.words)
 
         # Extract unique nouns and adjectives using an OrderedDict to maintain Order
-        unique_nouns = OrderedDict()
+        unique_words = OrderedDict()
         for word, tag in blob.tags:
             if tag == 'NN' or tag == 'JJ':
-                unique_nouns[word.lemmatize()] = None
+                unique_words[word.lemmatize()] = None
         
         # Convert the OrderedDict back to a list
-        final_words = list(unique_nouns.keys())
+        final_words = list(unique_words.keys())
         
         len_of_words = len(final_words)
         summary = final_words

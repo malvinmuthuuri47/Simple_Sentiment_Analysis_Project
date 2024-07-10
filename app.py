@@ -24,7 +24,7 @@ def analyse():
         # Extract unique nouns and adjectives using an OrderedDict to maintain Order
         unique_words = OrderedDict()
         for word, tag in blob.tags:
-            if tag == 'NN' or tag == 'JJ':
+            if tag in ['NN', 'NNS', 'NNP', 'NNPS', 'JJ', 'JJR', 'JJS', 'VB', 'VBD', 'VBG', 'VBN', 'VBP', 'VBZ'] :
                 unique_words[word.lemmatize()] = None
         
         # Convert the OrderedDict back to a list

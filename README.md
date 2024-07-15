@@ -7,3 +7,10 @@ This project intends to help organizations do so by including a sentiment analyz
 
 ## Installation
 You need to have Python Installed on your Operating System. Check [Here](https://realpython.com/installing-python/) for instructions on how to install Python on your Computer.
+
+After Installing Python, follow this [guide](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/) to install the following project dependencies:
+    1. flask
+    2. flask_bootstrap
+    3. textblob
+    4. time
+    5. collections

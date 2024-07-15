@@ -34,5 +34,6 @@ Here is an example of the a user statement and how the program performs the sent
 ![User Input](./Images/Screenshot%20from%202024-07-10%2023-38-47.png) <br>
 ![Program Output](./Images/Screenshot%20from%202024-07-10%2023-40-04.png) <br>
 
-This is a basic program. Please feel free to contribute and add to the codebase. Thank you
+This is a basic program. Please feel free to contribute and add to the codebase. <br> 
 
+Thank you

@@ -22,4 +22,17 @@ Navigate to the app.py folder and then, run the following command. <mark>python 
 
 This is the expected output if you have configured the project dependencies as instructed.<br>
 
-![Expected Terminal Output](./Images/Pasted%20image.png)
+![Expected Terminal Output](./Images/Terminal%20Output.png)<br>
+
+Copy the address shown on your terminal and paste it onto your browser. You will be greeted with such a page as this: <br>
+
+![Sentiment Analysis Dashboard](./Images/Sentiment_analysis_dashboard.png)<br>
+
+In the textbox provided, the user enters their input and the Python app.py logic performs a sentiment using Textblob. Leran more about Textblob and how it performs Sentiment analyis from its official documentaion [here](https://textblob.readthedocs.io/en/dev/index.html). <br>
+
+Here is an example of the a user statement and how the program performs the sentiment Analysis. <br>
+![User Input](./Images/Screenshot%20from%202024-07-10%2023-38-47.png) <br>
+![Program Output](./Images/Screenshot%20from%202024-07-10%2023-40-04.png) <br>
+
+This is a basic program. Please feel free to contribute and add to the codebase. Thank you
+

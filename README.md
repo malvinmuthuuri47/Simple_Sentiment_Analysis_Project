@@ -15,10 +15,10 @@ After Installing Python, follow this [guide](https://packaging.python.org/en/lat
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. time <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5. collections <br>
 
-These pacakges contain the project dependencies that the program needs for it to run as intended. After following these steps, you are now ready to see the beauty of NLP(Natural Language Processing) and sentiment analysis.
+These packages contain the project dependencies that the program needs for it to run as intended. After following these steps, you are now ready to see the beauty of NLP(Natural Language Processing) and sentiment analysis.
 
 # Usage
-Navigate to the app.py folder and then, run the following command. <mark>python app.py</mark>.
+Navigate to the app.py folder and then, run the following command. <strong><mark>python app.py</mark></strong>.
 
 This is the expected output if you have configured the project dependencies as instructed.<br>
 
@@ -28,7 +28,7 @@ Copy the address shown on your terminal and paste it onto your browser. You will
 
 ![Sentiment Analysis Dashboard](./Images/Sentiment_analysis_dashboard.png)<br>
 
-In the textbox provided, the user enters their input and the Python app.py logic performs a sentiment using Textblob. Learn more about Textblob and how it performs Sentiment analyis from its official documentaion [here](https://textblob.readthedocs.io/en/dev/index.html). <br>
+In the textbox provided, the user enters their input and the Python app.py logic performs a sentiment using Textblob. Learn more about Textblob and how it performs Sentiment analysis from its official documentaion [here](https://textblob.readthedocs.io/en/dev/index.html). <br>
 
 Here is an example of the a user statement and how the program performs the sentiment Analysis. <br>
 ![User Input](./Images/Screenshot%20from%202024-07-10%2023-38-47.png) <br>
